@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Película Promocional - Compra de Boletos</title>
+	<link rel="stylesheet" type="text/css" href="inic.css">
+</head>
+<body>
+	<header>
+		<h1>MARIO LA PELICULA</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Trailer</a></li>
+				<li><a href="#">Sinopsis</a></li>
+				<li><a href="#">Comprar Boletos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="trailer">
+			<h2>Trailer</h2>
+			<video controls>
+				<source src="trailer.mp4" type="video/mp4">
+			</video>
+		</section>
+		<section id="sinopsis">
+			<h2>Sinopsis</h2>
+			<p>En un mundo post-apocalíptico, un grupo de sobrevivientes lucha por sobrevivir en un entorno hostil y peligroso. Entre ellos, una joven heroína debe liderar al grupo hacia un lugar seguro, enfrentando múltiples desafíos en el camino.</p>
+		</section>
+		<section id="boletos">
+			<h2>Comprar Boletos</h2>
+			<form action="compra.php" method="post">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="cantidad">Cantidad de Boletos:</label>
+				<input type="number" id="cantidad" name="cantidad" min="1" max="10" required>
+				<label for="pago">Método de Pago:</label>
+				<select id="pago" name="pago" required>
+					<option value="">Seleccione un método de pago</option>
+					<option value="PayPal">PayPal</option>
+					<option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+				</select>
+				<input type="submit" value="Comprar">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>Derechos Reservados &copy; 2023 Película Promocional</p>
+	</footer>
+</body>
+</html>
